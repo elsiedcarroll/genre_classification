@@ -1,12 +1,19 @@
 import mlflow
 import os
 import hydra
+import wandb
 from omegaconf import DictConfig, OmegaConf
 
 
 # This automatically reads in the configuration
 @hydra.main(config_name='config')
 def go(config: DictConfig):
+
+    wandb.config = OmegaConf.to_container(
+         config, 
+         resolve=True, 
+         throw_on_missing=True
+    )
 
     # Setup the wandb experiment. All runs will be grouped under this name
     os.environ["WANDB_PROJECT"] = config["main"]["project_name"]
@@ -20,8 +27,8 @@ def go(config: DictConfig):
         # This was passed on the command line as a comma-separated list of steps
         steps_to_execute = config["main"]["execute_steps"].split(",")
     else:
-        assert isinstance(config["main"]["execute_steps"], list)
-        steps_to_execute = config["main"]["execute_steps"]
+
+        steps_to_execute = list(config["main"]["execute_steps"])
 
     # Download step
     if "download" in steps_to_execute:
@@ -50,7 +57,7 @@ def go(config: DictConfig):
         )
 
     if "check_data" in steps_to_execute:
-       _ = mlflow.run(
+        _ = mlflow.run(
             os.path.join(root_path, "check_data"),
             "main",
             parameters={
@@ -61,6 +68,7 @@ def go(config: DictConfig):
         )
 
     if "segregate" in steps_to_execute:
+
         _ = mlflow.run(
             os.path.join(root_path, "segregate"),
             "main",
@@ -74,7 +82,6 @@ def go(config: DictConfig):
         )
 
     if "random_forest" in steps_to_execute:
-
         # Serialize decision tree configuration
         model_config = os.path.abspath("random_forest_config.yml")
 
@@ -96,7 +103,7 @@ def go(config: DictConfig):
 
     if "evaluate" in steps_to_execute:
 
-       _ = mlflow.run(
+        _ = mlflow.run(
             os.path.join(root_path, "evaluate"),
             "main",
             parameters={
