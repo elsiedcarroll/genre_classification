@@ -92,6 +92,7 @@ def go(config: DictConfig):
                 "val_size": config["data"]["test_size"],
                 "stratify": config["data"]["stratify"]
             },
+        )
 
     if "evaluate" in steps_to_execute:
 
