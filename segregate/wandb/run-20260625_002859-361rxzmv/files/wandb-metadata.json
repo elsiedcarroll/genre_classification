@@ -1,0 +1,42 @@
+{
+  "os": "Linux-6.6.97+-x86_64-with-glibc2.36",
+  "python": "CPython 3.13.14",
+  "startedAt": "2026-06-25T00:28:59.112146Z",
+  "args": [
+    "--input_artifact",
+    "preprocessed_data.csv:latest",
+    "--artifact_root",
+    "data",
+    "--artifact_type",
+    "segregated_data",
+    "--test_size",
+    "0.3",
+    "--random_state",
+    "42",
+    "--stratify",
+    "genre"
+  ],
+  "program": "/workspace/genre_classification/segregate/run.py",
+  "codePath": "segregate/run.py",
+  "codePathLocal": "run.py",
+  "git": {
+    "remote": "https://github.com/elsiedcarroll/genre_classification.git",
+    "commit": "a1a499e11bbdfeb11edf79b9ded8112d29c27988"
+  },
+  "email": "ecarro11@wgu.edu",
+  "root": "/workspace/genre_classification/segregate",
+  "host": "3899575616c73ef7684b0fb72c7f3450c25f5740-744c786b9c-m6njt",
+  "executable": "/home/student/.conda/envs/mlflow-3184e08bb0e9bd75c072162c63a629bf34386d0c/bin/python",
+  "cpu_count": 8,
+  "cpu_count_logical": 16,
+  "disk": {
+    "/": {
+      "total": "2160158191616",
+      "used": "623067844608"
+    }
+  },
+  "memory": {
+    "total": "135077654528"
+  },
+  "writerId": "1gvbnic41pxxjq497lmfvdieksodhvnv"
+}

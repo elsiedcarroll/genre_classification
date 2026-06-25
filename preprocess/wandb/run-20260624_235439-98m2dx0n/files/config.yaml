@@ -1,0 +1,43 @@
+_wandb:
+    value:
+        cli_version: 0.24.0
+        e:
+            39oycod04q1yax9tfng2673w38702bi1:
+                args:
+                    - --input_artifact
+                    - raw_data.parquet:latest
+                    - --artifact_name
+                    - preprocessed_data.csv
+                    - --artifact_type
+                    - preprocessed_data
+                    - --artifact_description
+                    - Data with preprocessing applied
+                codePath: preprocess/run.py
+                codePathLocal: run.py
+                cpu_count: 8
+                cpu_count_logical: 16
+                disk:
+                    /:
+                        total: "2160158191616"
+                        used: "623270428672"
+                email: ecarro11@wgu.edu
+                executable: /home/student/.conda/envs/mlflow-0c0de061eeaefd8cf19694dcf7baac6a336c7f6b/bin/python
+                git:
+                    commit: a1a499e11bbdfeb11edf79b9ded8112d29c27988
+                    remote: https://github.com/elsiedcarroll/genre_classification.git
+                host: 3899575616c73ef7684b0fb72c7f3450c25f5740-744c786b9c-m6njt
+                memory:
+                    total: "135077654528"
+                os: Linux-6.6.97+-x86_64-with-glibc2.36
+                program: /workspace/genre_classification/preprocess/run.py
+                python: CPython 3.13.14
+                root: /workspace/genre_classification/preprocess
+                startedAt: "2026-06-24T23:54:39.079805Z"
+                writerId: 39oycod04q1yax9tfng2673w38702bi1
+        m: []
+        python_version: 3.13.14
+        t:
+            "4": 3.13.14
+            "5": 0.24.0
+            "12": 0.24.0
+            "13": linux-x86_64

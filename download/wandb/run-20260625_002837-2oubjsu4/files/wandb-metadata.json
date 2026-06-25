@@ -1,0 +1,38 @@
+{
+  "os": "Linux-6.6.97+-x86_64-with-glibc2.36",
+  "python": "CPython 3.13.14",
+  "startedAt": "2026-06-25T00:28:37.863585Z",
+  "args": [
+    "--file_url",
+    "https://github.com/udacity/nd0821-c2-build-model-workflow-exercises/blob/master/lesson-2-data-exploration-and-preparation/exercises/exercise_4/starter/genres_mod.parquet?raw=true",
+    "--artifact_name",
+    "raw_data.parquet",
+    "--artifact_type",
+    "raw_data",
+    "--artifact_description",
+    "Data as downloaded"
+  ],
+  "program": "/workspace/genre_classification/download/download_data.py",
+  "codePath": "download/download_data.py",
+  "codePathLocal": "download_data.py",
+  "git": {
+    "remote": "https://github.com/elsiedcarroll/genre_classification.git",
+    "commit": "a1a499e11bbdfeb11edf79b9ded8112d29c27988"
+  },
+  "email": "ecarro11@wgu.edu",
+  "root": "/workspace/genre_classification/download",
+  "host": "3899575616c73ef7684b0fb72c7f3450c25f5740-744c786b9c-m6njt",
+  "executable": "/home/student/.conda/envs/mlflow-6020c6165ff66772b09c5cc54c9af39b0c9c44b4/bin/python",
+  "cpu_count": 8,
+  "cpu_count_logical": 16,
+  "disk": {
+    "/": {
+      "total": "2160158191616",
+      "used": "623079571456"
+    }
+  },
+  "memory": {
+    "total": "135077654528"
+  },
+  "writerId": "hos88bwyvjshuhazptxz7ezw7s1cwqkd"
+}
